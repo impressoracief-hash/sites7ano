@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ALIMETAÇÃO SAUDÁVEL</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Da Terra à Mesa: Do Campo à Indústria</h1>
+      <p>Conhecendo os alimentos: do natural aos industrializados</p>
+      <div class="faixa"></div>
+    </header>
+    <div class="faixa1"></div>
+    <nav>
+      <a href="index.html" class="btn-cta active">Início</a>
+      <a href="alimentosaudavel.html" class="btn-cta">Saudável</a>
+      <a href="processado.html" class="btn-cta">Processado</a>
+      <a href="ultraprocessado.html" class="btn-cta">Ultra Processado</a>
+       <a href="contato.html" class="btn-cta">Contato</a>
+    </nav>
+
+    <section>
+     <h2>Bem-vindo ao Mundo da Alimentação</h2>
+      <img
+        src="https://vidasport.com.br/uploads/images/2020/08/alimentos-vivos-o-que-sao-e-como-podem-mudar-a-sua-vida-1597166284.jpg"
+        height="100px"
+      />
+     
+      <br />
+      <p>
+        A alimentação faz parte do nosso dia a dia e está presente em todos os
+        momentos: no café da manhã, no almoço, no lanche e no jantar. Mas você
+        já parou para pensar de onde vêm os alimentos que chegam até a nossa
+        mesa?
+      </p>
+      <br />
+      <p>
+        Alguns alimentos vêm diretamente da natureza, como frutas, verduras e
+        legumes. Outros passam por processos industriais até chegarem prontos ou
+        quase prontos para o consumo, como biscoitos, refrigerantes e comidas
+        congeladas. Entre esses dois extremos, existem diferentes tipos de
+        alimentos: os naturais, os processados e os ultraprocessados.
+      </p>
+      <br />
+      <p>
+        Entender a origem dos alimentos é importante para fazermos escolhas mais
+        saudáveis. Ao conhecer como eles são produzidos, preparados e
+        consumidos, conseguimos cuidar melhor da nossa saúde e valorizar os
+        alimentos produzidos em nossa cidade e região.
+      </p>
+      <br />
+      <img src="https://www.vidasport.com.br/uploads/images/2020/08/28-1597166169.jpg" height="100px" />
+      <p>
+        Ao longo deste estudo, vamos descobrir como os alimentos saem do campo,
+        passam (ou não) pela indústria e chegam até a nossa casa.
+      </p>
+    </section>
+    <script>
+      const links = document.querySelectorAll("nav a");
+
+      links.forEach((link) => {
+        link.addEventListener("click", function () {
+          links.forEach((l) => l.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+    <footer>
+      <p>Projeto 7º ano | Escola CIEF</p>
+      <p>Disciplina: Educação Digital</p>
+    </footer>
+  </body>
+</html>

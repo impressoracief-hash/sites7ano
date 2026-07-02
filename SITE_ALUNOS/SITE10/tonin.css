@@ -1,0 +1,13 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+}
+
+header {
+  background: linear-gradient(
+    to right,
+    rgba(22, 22, 207, 0.674),
+    rgb(204, 18, 18),
+    rgb(211, 11, 211)
+  );
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ALIMETAÇÃO SAUDÁVEL</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+      <div class="topo-fixo">
+    <header>
+      <h1>ALIMENTAÇÃO SAUDÁVEL</h1>
+      <br>
+      <div class="faixa"></div>
+        
+      
+    </header>
+
+   <nav>
+      <a href="index.html" class="btn-cta ">Início</a>
+  <a href="alimentosaudavel.html" class="btn-cta active">Saudável</a>
+  <a href="processado.html" class="btn-cta">Processado</a>
+  <a href="ultraprocessado.html" class="btn-cta">Ultra Processado</a>
+  <a href="contato.html" class="btn-cta">Contato</a>
+</nav>
+
+  
+</div>
+    <h2>In Natura ou Minimamente processados</h2>
+    <section class="galeria">
+    
+      <img src="imagens/milho.png" />
+      <img src="imagens/manga.png" />
+      <img src="imagens/uva.png" />
+      <img src="imagens/maca.png" />
+    </section>
+    <footer>
+  <p>Projeto 7º ano | Escola CIEF</p>
+  <p>Disciplina: Educação Digital</p>
+  <script>
+  const links = document.querySelectorAll("nav a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function() {
+      links.forEach(l => l.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+</script>
+</footer>
+  </body>
+</html>

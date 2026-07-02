@@ -1,0 +1,45 @@
+body{
+
+font-family: arial, helvetica, Arial, Helvetica, sans-serif;
+margin:0;
+
+
+}
+header{
+
+  background: linear-gradient(rgb(221, 224, 8),rgba(255, 9, 239, 0.248), rgb(230, 198, 226));
+padding:0px ;
+text-align: center;
+
+}
+
+
+.linha{
+width: 1000px;
+height: 7px;
+background-color:beige;
+}
+
+
+
+nav a{
+color:black;
+text-decoration: none;
+padding: 5px 10px;
+border: 30px;
+font-family: bold;
+align-items: flex-end;
+border-radius: 10PX;
+}
+nav a:hover{
+  background-color: rgb(221, 152, 219);
+border: radius 10px;
+}
+
+footer{
+
+  background-color: rgb(48, 2, 41);
+  color: rgb(225, 190, 237);
+  margin-top: 500px;
+  text-align: center;
+}

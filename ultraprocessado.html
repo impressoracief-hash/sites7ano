@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ALIMENTAÇÃO ULTRAPROCESSADA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+      <div class="topo-fixo">
+    <header>
+      <h1>ALIMENTAÇÃO ULTRAPROCESSADA</h1>
+
+      <br />
+      <div class="faixa"></div>
+    </header>
+
+    <nav>
+      <a href="index.html" class="btn-cta">Início</a>
+      <a href="alimentosaudavel.html" class="btn-cta">Saudável</a>
+      <a href="processado.html" class="btn-cta">Processado</a>
+      <a href="ultraprocessado.html" class="btn-cta active">Ultra Processado</a>
+      <a href="contato.html" class="btn-cta">Contato</a>
+    </nav>
+
+  
+</div>
+    <section>
+      <h2>Os Perigos dos Alimentos Ultraprocessados</h2>
+
+      <img src="./imagens/ultra.avif" height="200" />
+      <p>
+        Uma
+        <span style="font-weight: bold; color: red"
+          >alimentação ultraprocessada</span
+        >
+        não contribui para uma vida saudável, pois contém altos níveis de
+        açúcar, gorduras e aditivos químicos. Além disso, o consumo frequente de
+        alimentos ultraprocessados pode aumentar o risco de doenças como
+        obesidade, diabetes e problemas no coração. Isso acontece porque esses
+        alimentos são pobres em nutrientes importantes para o nosso corpo.
+      </p>
+      <p>
+        Outro ponto importante é que os alimentos ultraprocessados costumam
+        substituir comidas naturais na rotina. Com isso, deixamos de consumir
+        frutas, verduras e legumes, que são essenciais para uma alimentação
+        equilibrada.
+      </p>
+      <p>
+        Por isso, é importante buscar um equilíbrio na alimentação, dando
+        preferência aos alimentos naturais ou pouco processados. Assim, cuidamos
+        melhor da nossa saúde e garantimos mais qualidade de vida no dia a dia.
+      </p>
+    </section>
+    <script>
+      const links = document.querySelectorAll("nav a");
+
+      links.forEach((link) => {
+        link.addEventListener("click", function () {
+          links.forEach((l) => l.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+    <footer>
+      <p>Projeto 7º ano | Escola CIEF</p>
+      <p>Disciplina: Educação Digital</p>
+    </footer>
+  </body>
+</html>

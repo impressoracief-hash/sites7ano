@@ -1,0 +1,197 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: "Georgia", serif;
+    background-color: #f2e6d9; /* cor de papel envelhecido */
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(
+        135deg,
+        #5c3b1e,
+        #8b5e3c,
+        #c19a6b,
+        #8b5e3c,
+        #5c3b1e
+    );
+
+    background-size: 300% 300%;
+    animation: woodMove 6s ease infinite;
+
+    text-align: center;
+    color: #fff8f0;
+    padding: 30px 20px;
+    border-bottom: 4px solid #5c3b1e;
+}
+
+/* efeito de movimento nas cores */
+@keyframes woodMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+   /* Linha decorativa */
+.linha {
+    width: 60%;
+    height: 5px;
+    margin: 10px auto;
+    border-radius: 10px;
+
+    animation: grow 1.2s ease,
+               woodLine 5s ease infinite;
+
+    background: linear-gradient(
+        90deg,
+        #fff8f0,
+        #e7c9a9,
+        #c19a6b,
+        #e7c9a9,
+        #fff8f0
+    );
+
+    background-size: 300% 300%;
+}
+
+@keyframes grow {
+    from { width: 0; }
+    to { width: 60%; }
+}
+
+@keyframes woodLine {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes grow {
+    from { width: 0; }
+    to { width: 60%; }
+}
+
+/* Menu */
+nav {
+    background-color: #3e2c1c;
+    padding: 12px;
+    text-align: center;
+
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+/* Links */
+nav a {
+    color: #f5e6d3;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border-radius: 6px;
+
+    transition: all 0.3s ease;
+}
+
+/* Hover rústico */
+nav a:hover {
+    background-color: #a47148;
+    transform: scale(1.05);
+}
+
+/* Conteúdo */
+main {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #5c3b1e;
+
+    animation: fadeIn 2s ease;
+}
+
+/* Imagens */
+ul li img {
+    display: block;
+    margin: 50px auto;
+    border-radius: 12px;
+    /* max-width: 90%; */
+
+    border: 5px solid #8b5e3c;
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Ajuste */
+img {
+    height: 250px;
+    width: 350px;
+    object-fit: cover;
+}
+
+/* Efeito hover */
+ul li img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+}
+
+/* Rodapé */
+footer {
+    background-color: #3e2c1c;
+    color: #f5e6d3;
+    text-align: center;
+    padding: 15px;
+
+    border-top: 4px solid #5c3b1e;
+
+    animation: fadeIn 2s ease;
+    margin-top:500px
+}
+
+img{
+    margin-top: 10px
+}

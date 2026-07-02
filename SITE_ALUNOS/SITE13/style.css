@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  padding: 0;
+}
+
+header {
+  position: fixed; /* fixa no topo */
+  top: 0;
+  width: 100%;
+background: linear-gradient(rgb(34, 222, 255), blue, rgb(4, 17, 88), white);
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column; /* título em cima, menu embaixo */
+  align-items: center; /* centraliza tudo */
+  z-index: 1000; /* garante que fique acima do conteúdo */
+}
+section {
+  padding: 130px 20px 20px; /* espaço para o header fixo */
+}
+.linha{
+width: 100%;
+height: 5px;
+/* background-color: #c0ba80; */
+
+}
+
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+}
+nav a:hover{
+  background-color: #bc2f2f;
+  color:rgb(236, 232, 13);
+}
+
+
+.linha {
+  width: 100%;
+  height: 4px;
+  background: #c0ba80;
+}
+span {
+  color: #bc2f2f;
+  font-weight: bold;
+}
+
+footer{
+  background-color: black;
+  color: #c0ba80;
+text-align: center;
+margin-top: 500px;
+}

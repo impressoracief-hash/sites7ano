@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ALIMETAÇÃO SAUDÁVEL</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+      <div class="topo-fixo">
+    <header>
+      <h1>Da Terra à Mesa: Do Campo à Indústria</h1>
+      <p>Conhecendo os alimentos: do natural aos industrializados</p>
+      <div class="faixa"></div>
+    </header>
+    <div class="faixa1"></div>
+    <nav>
+  <a href="index.html" class="btn-cta ">Início</a>
+  <a href="alimentosaudavel.html" class="btn-cta">Saudável</a>
+  <a href="processado.html" class="btn-cta">Processado</a>
+  <a href="ultraprocessado.html" class="btn-cta">Ultra Processado</a>
+  <a href="pagina-atual.html" class="btn-cta active">Contato</a>
+</nav>
+
+  
+</div>
+    <section>
+     
+      
+      <h2>Bem-vindo ao Página Atual</h2>
+      <br />
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      </p>
+      <br />
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      </p>
+      <br />
+      <p>
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      <br />
+      <p>
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      </p>
+    </section>
+<script>
+  const links = document.querySelectorAll("nav a");
+
+  links.forEach(link => {
+    link.addEventListener("click", function() {
+      links.forEach(l => l.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+</script>
+    <footer>
+      <p>Projeto 7º ano | Escola CIEF</p>
+      <p>Disciplina: Educação Digital</p>
+    </footer>
+  </body>
+</html>

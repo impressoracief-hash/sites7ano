@@ -1,0 +1,9 @@
+body{
+font-family:'Courier New', Courier, monospace 0;
+}
+header {
+
+background: linear-gradient(to left,purple, rgb(69, 5, 69) );
+text-align: center;
+color: rgb(222, 156, 255);
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Produtores</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+      <div class="topo-fixo">
+    <header>
+      <h1>ALIMENTAÇÃO PROCESSADA</h1>
+      <br>
+      <div class="faixa"></div>
+        
+      
+    </header>
+
+<nav>
+     <a href="index.html" class="btn-cta ">Início</a>
+  <a href="alimentosaudavel.html" class="btn-cta">Saudável</a>
+  <a href="processado.html" class="btn-cta active">Processado</a>
+  <a href="ultraprocessado.html" class="btn-cta">Ultra Processado</a>
+<a href="contato.html" class="btn-cta">Contato</a>
+</nav>
+        
+    </div>
+    <section>
+      <h2>O que é um alimento processado?</h2>
+      <p>
+        Alimentos processados são aqueles que passam por algum tipo de
+        transformação, como cozimento, congelamento ou adição de ingredientes.
+        Eles podem conter aditivos químicos para melhorar o sabor, a textura ou a
+        conservação. Exemplos de alimentos processados incluem pães, queijos,
+        enlatados e comidas congeladas.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI1TtEnftfGuE_1inS53pnv7KF9vFncnc_5A&s" alt="">
+          
+        </section>
+        <script>
+      const links = document.querySelectorAll("nav a");
+
+      links.forEach((link) => {
+        link.addEventListener("click", function () {
+          links.forEach((l) => l.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+    <footer>
+      <p>Projeto 7º ano | Escola CIEF</p>
+      <p>Disciplina: Educação Digital</p>
+    </footer>
+  </body>
+</html>

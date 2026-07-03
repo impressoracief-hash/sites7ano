@@ -11,3 +11,10 @@ text-aling:center;
 color: pink;
 
 }
+
+/* ===== RESPONSIVIDADE MOBILE ===== */
+@media (max-width: 600px) {
+  header {
+    padding: 20px 10px;
+  }
+}

@@ -11,3 +11,10 @@ header {
     rgb(211, 11, 211)
   );
 }
+
+/* ===== RESPONSIVIDADE MOBILE ===== */
+@media (max-width: 600px) {
+  header {
+    padding: 20px 10px;
+  }
+}

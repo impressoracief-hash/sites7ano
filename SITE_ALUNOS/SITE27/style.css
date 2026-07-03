@@ -1,0 +1,62 @@
+body{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+header{
+
+
+background: linear-gradient(to right, white, red, white);
+color: yellowd;
+text-align: center;
+padding: 5px;
+
+
+}
+.linha{
+width: 100%;
+height: 5px;
+background-color: black;
+border-radius: 4px;
+
+}
+nav a{
+ text-decoration: none;
+ display: infinite-flex;
+ padding: 1px;
+margin: 20px 20px 0px 0px;
+color: black;
+}
+nav a:hover{
+background-color:black;
+border-radius: 8px;
+color: white;
+padding: 5px;
+gap: 5px;
+}
+
+footer{
+background-color: black;
+color: white;
+margin-top: 500px;
+font-size: 12px;
+line-height: 0.8;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

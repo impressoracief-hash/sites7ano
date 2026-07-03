@@ -47,10 +47,7 @@ nav a:hover {
   color: white;
   transform: scale(1.05);
 }
-/* empurra o conteúdo pra baixo */
-section {
-  margin-top: 180px; /* ajuste conforme altura real */
-}
+
 /* página ativa */
 nav a.active {
   background-color: #4CAF50;
@@ -59,16 +56,22 @@ nav a.active {
   box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
-section {
-  padding: 15 px;
+section h2{
+  padding: 10px;
   text-align: center;
-  
+  margin-top: 10px;
 }
-
+section p {
+  text-align: justify;
+  margin: 0 20px;
+  line-height: 2;
+  text-indent: 50px;
+}
 img {
   margin: 10px;
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  align-items: center;
 }
 
 footer {
@@ -88,20 +91,23 @@ footer {
 }
 
 .galeria img {
-  width: 150px;
+  width: 250px;
+  height: 250px;
   border-radius: 10px;
 }
 
-h2 {
+img{
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+} 
+.container{
   text-align: center;
-  margin-top: 10px;
-}
+  margin: 20px;
+  border: 5px solid gold;
+  padding: 20px;  
 
-section p {
-  text-align: justify;
-  margin: 0 20px;
-  line-height: 2;
-  text-indent: 50px;
 }
 
 /* faixa estilizada */
@@ -112,5 +118,13 @@ section p {
   margin-top: 20px;
   border-radius: 5px;
 }
-
-
+ .secao-contato {
+  margin-top: 20px !important;
+  text-align: center;
+}
+section {
+  margin-top: 100px;
+}
+.galeria-alunos img{
+  width: 50px;
+}

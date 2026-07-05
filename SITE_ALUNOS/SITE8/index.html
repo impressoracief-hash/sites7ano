@@ -1,113 +1,89 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALIMENTOS</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .galeria {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .item {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .item img {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .item img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-<h1>DA TERRA Á MESA: DO CAMPO Á INDUSTRIA</h1>
-<p>conhecendo os alimentos: do natural aos industrializados</p>
-<div class="linha"></div>
+        <h1>DA TERRA À MESA: DO CAMPO À INDÚSTRIA</h1>
+        <p>Conhecendo os alimentos: do natural aos industrializados</p>
+        <div class="linha"></div>
+        <nav>
+            <a href="index.html">INÍCIO</a>
+            <a href="innatura.html">IN NATURA</a>
+            <a href="processados.html">PROCESSADOS</a>
+            <a href="ultra.html">ULTRA PROCESSADOS</a>
+        </nav>
+    </header>
 
-<NAV>
-<a href="index.html">INÍCIO</a>
-<a href="innatura.html">IN NATURA</a>
-<a href="processados.html">PROCESSADOS</a>
-<a href="ultra.html">ULTRA PROCESSADOS</a>
- 
-</NAV>
-</header>
+    <h2>INÍCIO</h2>
 
-
-<h2>INÍCIO</h2>
-
-<p>
-        Olá! Meu nome é [Miguel Cecconet Agnes] e desenvolvi este site para apresentar informações
+    <p>
+        Olá! Meu nome é Miguel Cecconet Agnes e desenvolvi este site para apresentar informações
         sobre alimentos in natura, processados e ultraprocessados. O objetivo é ajudar
         as pessoas a entenderem as diferenças entre esses tipos de alimentos e como
         eles podem influenciar nossa saúde e qualidade de vida.
     </p>
 
-    <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<title>Exemplos de Alimentos</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #f5f5f5;
-    }
+    <h1>Tipos de Alimentos</h1>
 
-    .galeria {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        margin-top: 20px;
-    }
-
-    .item {
-        background: white;
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    img {
-        width: 250px;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-</style>
-</head>
-<body>
-
-<h1>Tipos de Alimentos</h1>
-
-<div class="galeria">
-
-    <div class="item">
-        <h2>In Natura</h2>
-        <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=600" alt="Maçã">
-        <p>Maçã</p>
+    <div class="galeria">
+        <div class="item">
+            <h2>In Natura</h2>
+            <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=600" alt="Maçã">
+            <p>Maçã</p>
+        </div>
+        <div class="item">
+            <h2>Processado</h2>
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600" alt="Pão">
+            <p>Pão</p>
+        </div>
+        <div class="item">
+            <h2>Ultraprocessado</h2>
+            <img src="https://images.unsplash.com/photo-1581636625402-29b2a704ef13?w=600" alt="Salgadinho">
+            <p>Salgadinho de pacote</p>
+        </div>
     </div>
 
-    <div class="item">
-        <h2>Processado</h2>
-        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600" alt="Pão">
-        <p>Pão</p>
-    </div>
+    <footer>
+        <p>Projeto 7º ano | Escola CIEF</p>
+        <p>Disciplina: Educação Digital</p>
+    </footer>
 
-    <div class="item">
-        <h2>Ultraprocessado</h2>
-        <img src="https://images.unsplash.com/photo-1581636625402-29b2a704ef13?w=600" alt="Salgadinho">
-        <p>Salgadinho de pacote</p>
-    </div>
-
-</div>
-
-<script src="../voltar.js"></script>
+    <script src="../voltar.js"></script>
 </body>
 </html>
-
-
-
-
-<footer>
-
-
-<P>projeto 7º ano | escola CIEF</P>
-<p>disciplina: Educação Digital</p>
-</footer>
-
-<script src="../voltar.js"></script>
-</body>
-</html>
-
-

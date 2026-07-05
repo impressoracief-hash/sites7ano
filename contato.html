@@ -6,6 +6,118 @@
     <title>Trabalhos dos Alunos - 7º Ano</title>
     <link rel="stylesheet" href="style.css" />
     <style>
+      /* ===== POPUP DIREITOS AUTORAIS ===== */
+      #overlay-direitos {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+      }
+
+      #popup-direitos {
+        background: #fff;
+        border-radius: 14px;
+        max-width: 600px;
+        width: 100%;
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        overflow: hidden;
+      }
+
+      #popup-direitos .popup-header {
+        background: linear-gradient(to left, #a8cc08, #2e7d32);
+        color: white;
+        padding: 18px 24px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      #popup-direitos .popup-header h2 {
+        margin: 0;
+        font-size: 1.1rem;
+        line-height: 1.3;
+      }
+
+      #popup-direitos .popup-header span {
+        font-size: 1.6rem;
+      }
+
+      #popup-direitos .popup-body {
+        padding: 20px 24px;
+        overflow-y: auto;
+        flex: 1;
+        font-size: 0.92rem;
+        color: #333;
+        line-height: 1.7;
+      }
+
+      #popup-direitos .popup-body p {
+        margin: 0 0 12px;
+        text-indent: 0;
+      }
+
+      #popup-direitos .popup-footer {
+        padding: 16px 24px;
+        border-top: 1px solid #ddd;
+        background: #f9f9f9;
+      }
+
+      #popup-direitos .checkbox-label {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        cursor: pointer;
+        font-size: 0.95rem;
+        font-weight: bold;
+        color: #2e7d32;
+        margin-bottom: 14px;
+      }
+
+      #popup-direitos .checkbox-label input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        margin-top: 2px;
+        accent-color: #2e7d32;
+        cursor: pointer;
+      }
+
+      #btn-confirmar-direitos {
+        width: 100%;
+        padding: 12px;
+        background-color: #ccc;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: not-allowed;
+        transition: background-color 0.3s;
+      }
+
+      #btn-confirmar-direitos.ativo {
+        background-color: #2e7d32;
+        cursor: pointer;
+      }
+
+      #btn-confirmar-direitos.ativo:hover {
+        background-color: #1b5e20;
+      }
+
+      /* Bloqueia os cards antes de aceitar */
+      .cards-bloqueados .card-aluno {
+        pointer-events: none;
+        opacity: 0.4;
+        filter: grayscale(60%);
+      }
+
       .galeria-alunos {
         display: flex;
         flex-wrap: wrap;
@@ -237,13 +349,64 @@
       <p>© Imagens pertencentes aos seus respectivos autores. Utilizadas para fins educacionais. Os direitos autorais permanecem com seus detentores legais.</p>
     </footer>
 
+    <!-- ===== POPUP DIREITOS AUTORAIS ===== -->
+    <div id="overlay-direitos" role="dialog" aria-modal="true" aria-labelledby="popup-titulo">
+      <div id="popup-direitos">
+        <div class="popup-header">
+          <span>⚖️</span>
+          <h2 id="popup-titulo">Aviso de Direitos Autorais das Imagens</h2>
+        </div>
+        <div class="popup-body">
+          <p>Prezado(a) usuário(a),</p>
+          <p>Ao acessar este site, informamos que os trabalhos aqui publicados foram desenvolvidos por estudantes para fins educacionais. Algumas imagens utilizadas nos projetos podem pertencer a seus respectivos autores e detentores de direitos autorais.</p>
+          <p>Todos os direitos sobre essas imagens permanecem reservados aos seus criadores e proprietários originais. A exibição das imagens neste ambiente tem finalidade exclusivamente educacional, sem intenção de obtenção de lucro ou reivindicação de propriedade intelectual.</p>
+          <p>É expressamente proibida a reprodução, distribuição, alteração, utilização comercial ou qualquer outra forma de uso das imagens sem a autorização prévia de seus respectivos titulares dos direitos autorais.</p>
+          <p>Caso algum detentor de direitos autorais identifique material de sua propriedade e deseje solicitar a correção, inclusão de créditos ou remoção do conteúdo, poderá entrar em contato com a administração do site.</p>
+          <p>Agradecemos a compreensão e o respeito à legislação de direitos autorais vigente.</p>
+        </div>
+        <div class="popup-footer">
+          <label class="checkbox-label">
+            <input type="checkbox" id="check-direitos" />
+            Li e compreendi o aviso sobre direitos autorais.
+          </label>
+          <button id="btn-confirmar-direitos" disabled>Acessar os sites dos alunos</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="topo-fixo.js"></script>
     <script>
+      // Nav active state
       const links = document.querySelectorAll("nav a");
       links.forEach((link) => {
         link.addEventListener("click", function () {
           links.forEach((l) => l.classList.remove("active"));
           this.classList.add("active");
         });
+      });
+      const overlay   = document.getElementById("overlay-direitos");
+      const checkBox  = document.getElementById("check-direitos");
+      const btnOk     = document.getElementById("btn-confirmar-direitos");
+      const galerías  = document.querySelectorAll(".galeria-alunos");
+
+      // Bloqueia os cards enquanto o popup está aberto
+      galerías.forEach(g => g.classList.add("cards-bloqueados"));
+
+      // Habilita o botão só quando o checkbox for marcado
+      checkBox.addEventListener("change", function () {
+        if (this.checked) {
+          btnOk.disabled = false;
+          btnOk.classList.add("ativo");
+        } else {
+          btnOk.disabled = true;
+          btnOk.classList.remove("ativo");
+        }
+      });
+
+      // Fecha o popup e libera os cards
+      btnOk.addEventListener("click", function () {
+        overlay.style.display = "none";
+        galerías.forEach(g => g.classList.remove("cards-bloqueados"));
       });
     </script>
   </body>
